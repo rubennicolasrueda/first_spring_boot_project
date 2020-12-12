@@ -1,10 +1,10 @@
-package com.chanceIT.first_spring_boot_project;
+package com.chanceIT.cliente_project;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FirstSpringBootProjectApplicationTests {
+class ClienteProjectApplicationTests {
 
 	@Test
 	public void contextLoads() {

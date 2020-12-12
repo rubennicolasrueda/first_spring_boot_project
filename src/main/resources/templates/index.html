@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,33 +15,42 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <form action="/Cliente" method="post" enctype="multipart/form-data">
+    <form action="/clientes" method="post" enctype="multipart/form-data" name="cliente">
         <div>
             <br><h2>Alta de cliente</h2><br>
         </div>
         <div class="form-group">
             <label for="fnombre">Nombres</label>
-            <input type="text" class="form-control" label="nombre" id="fnombre">
+            <input value="" type="text" class="form-control" label="nombre" id="fnombre" name="nombre">
         </div>
         <div class="form-group">
             <label for="fapellido">Apellido</label>
-            <input type="text" class="form-control" label="apellido" id="fapellido">
+            <input value="" type="text" class="form-control" label="apellido" id="fapellido" name="apellido">
         </div>
         <div class="form-group">
-            <label for="fedad">Edad</label>
-            <input type="text" class="form-control" label="edad" id="fedad">
-        </div>
-        <div class="form-check">Género<br> 
-            <input type="radio" id="otro" name="genero">
-            <label for="otro">Otro</label>
-            <input type="radio" id="fenemino" name="genero" >
-            <label for="fenemino">Femenino</label>
-            <input type="radio" id="masculino" name="genero">
-            <label for="masculino">Masculino</label><br><br>
+            <label for="ffecha_nacimiento">Fecha de nacimiento</label>
+            <input value="" type="date" placeholder="dd-mm-yyyy" class="form-control" min="1900-01-01" max="2030-12-31" label="fecha de nacimiento" id="ffecha_nacimiento" name="fecha_nacimiento">
         </div>
         <div>
             <input type="submit" id="enviarCliente" class="btn btn-primary" value="Enviar"><br>
         </div>
     </form>
+    <table>
+        <tbody>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col"> Nombre</th>
+                <th scope="col"> Apellido</th>
+                <th scope="col"> Fecha de nacimiento</th>
+            </tr>
+            </thead>
+        <tr th:each="cliente : ${clientes}">
+            <td scope="row"><span th:text="${cliente.nombre}"> Nombre </span></td>
+            <td scope="row"><span th:text="${cliente.apellido}"> Apellido </span></td>
+            <td scope="row"><span th:text="${cliente.fecha_nacimiento}"> Fecha de nacimiento </span></td>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>

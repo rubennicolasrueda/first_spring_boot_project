@@ -1,4 +1,4 @@
-package com.chanceIT.first_spring_boot_project;
+package com.chanceIT.cliente_project;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,11 +11,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 * */
 
 @SpringBootApplication
-public class FirstSpringBootProjectApplication {
+public class ClienteProjectApplication {
 
 	public static void main(String[] args) {
 		//runs the aplication
-		SpringApplication.run(FirstSpringBootProjectApplication.class, args);
+		SpringApplication.run(ClienteProjectApplication.class, args);
 	}
 
 }

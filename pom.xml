@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.chanceIT</groupId>
-	<artifactId>first_spring_boot_project</artifactId>
+	<artifactId>cliente_project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>first_spring_boot_project</name>
 	<description>project for Spring Boot</description>
@@ -49,6 +49,16 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+			<version>42.2.16</version>
 		</dependency>
 	</dependencies>
 	<build>

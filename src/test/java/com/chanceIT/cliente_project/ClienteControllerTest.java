@@ -1,6 +1,6 @@
-package com.chanceIT.first_spring_boot_project;
+package com.chanceIT.cliente_project;
 
-import com.chanceIT.first_spring_boot_project.Controllers.ClienteController;
+import com.chanceIT.cliente_project.controllers.ClienteController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -18,6 +18,6 @@ public class ClienteControllerTest {
 
     @Test
     public void someTest() throws Exception {
-        //mockMvc.perform(get("/")).andExpect(status().isOk()).andExpect(view().name("index"));
+        mockMvc.perform(get("/Cliente")).andExpect(status().isOk()).andExpect(view().name("index"));
     }
 }
